@@ -1,1 +1,1 @@
-and etude of `Land of Lisp`
+My etude of `Land of Lisp`

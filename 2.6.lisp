@@ -1,0 +1,15 @@
+(flet ((f (n) (+ n 10))
+       (sq (x) (* x x)))
+  (print (cons (f 0)
+               (sq 3))))
+
+(labels ((even-p (x)
+                 (if (= x 0) t (odd-p (1- x))))
+         (odd-p (x)
+                (if (= x 0) nil (even-p (1- x)))))
+  (print (list (even-p 0) (odd-p 0)))
+  (print (list (even-p 1) (odd-p 1)))
+  (print (list (even-p 10) (odd-p 10)))
+  (print (list (even-p 11) (odd-p 11)))
+  )
+
