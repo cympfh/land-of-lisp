@@ -1,5 +1,3 @@
-(load "5.lisp")
-
 (defun dot-name (exp)
   (substitute-if
     #\_
