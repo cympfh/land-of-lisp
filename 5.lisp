@@ -1,7 +1,7 @@
 (defparameter *nodes*
-  '((living-room (wizard snoring on the couch))
-    (garden (a well))
-    (attic (giant welding torch in the corner))))
+  '((living-room (a wizard snoring on the couch.))
+    (garden (a well in front of you.))
+    (attic (giant welding torch in the corner.))))
 
 ; *nodes* is alist (assoc-list)
 ; and `assoc` lookup with it
@@ -57,10 +57,10 @@
 (defparameter *location* 'living-room)
 
 (defun look ()
-  (print (describe-location *location* *nodes*))
-  (print (describe-paths *location* *edges*))
-  (print (describe-objects *location* *objects* *object-locations*))
-  'done)
+  (append
+    (describe-location *location* *nodes*)
+    (describe-paths *location* *edges*)
+    (describe-objects *location* *objects* *object-locations*)))
 
 ;; 5.5
 
