@@ -1,2 +1,2 @@
 clean:
-	rm *.fas *.lib
+	rm -f *.fas *.lib feh_*.png
